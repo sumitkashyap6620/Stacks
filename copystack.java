@@ -1,6 +1,24 @@
 import java.util.Stack ;
 import java.util.Scanner ;
 public class copystack{
+    public static void displayr(Stack<Integer> s){
+        if(s.size()==0)return ;
+        int x = s.pop();
+        displayr(s);
+        System.out.print(x+ " ");
+        s.push(x);
+    }
+     public static void insB(Stack<Integer> s , int a ){
+        if(s.size()==0){
+            s.push(a);
+            return ;
+
+        }
+        int x = s.pop();
+        insB(s, a);
+        s.push(x) ;
+        
+    }
     public static void main(String[] args) {
         Stack<Integer> st = new Stack<>();
         Stack<Integer> tst = new Stack<>();
@@ -13,15 +31,15 @@ public class copystack{
                st.push(sc.nextInt());
         }
        System.out.println(st);
-        while (st.size()!=0) {
-            tst.push(st.peek());
-            st.pop();
-        }
-         while (tst.size()!=0) {
-            cst.push(tst.peek());
-            tst.pop();
-        }
-        System.out.println(cst);
+       insB(st , 8 );
+       displayr(st);
+       System.out.println();
+       System.out.println(st);
+        // while (st.size()!=0) 
+        //     tst.push(st.pop());
+        //     while (tst.size()!=0) 
+        //     cst.push(tst.pop());
+        // System.out.println(cst);
        
     }
 }
