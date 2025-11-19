@@ -38,13 +38,27 @@ public class ArrayImplementation{
        st.display();
        System.out.println();
         st.pop();
-        st.display();
-        System.out.println();
-        st.pop();
-        st.display();
-        System.out.println();
-        st.pop();
+        // st.display();
+        // System.out.println();
+        // st.pop();
+        // st.display();
+        // System.out.println();
+        // st.pop();
        st.pop();
        st.pop();
+       st.push(2);
+       st.push(20);
+       st.push(21);
+       st.push(23);
+       st.push(25);
+       st.push(26);
+       
+       st.push(22);
+       st.push(27);
+       st.push(29);
+       st.push(25);
+       st.display();
+    //    st.push(265);
+    //    st.push(27);
     }
 }

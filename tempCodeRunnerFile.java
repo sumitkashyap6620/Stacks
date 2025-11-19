@@ -1,1 +1,2 @@
-st.pop();
+
+        st.dispaly();
