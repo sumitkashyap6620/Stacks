@@ -19,6 +19,14 @@ public class copystack{
         s.push(x) ;
         
     }
+     public static void reversest(Stack<Integer> s ){
+        if(s.size()==1){
+            return ;
+        }
+        int x = s.pop();
+        reversest(s);
+        insB(s, x);   
+    }
     public static void main(String[] args) {
         Stack<Integer> st = new Stack<>();
         Stack<Integer> tst = new Stack<>();
@@ -34,6 +42,8 @@ public class copystack{
        insB(st , 8 );
        displayr(st);
        System.out.println();
+       System.out.println(st);
+       reversest(st);
        System.out.println(st);
         // while (st.size()!=0) 
         //     tst.push(st.pop());
