@@ -12,15 +12,18 @@ public class LLimplementation{
         temp.next = top ;
         top = temp ;
        }
-       void dispaly(){
-        node temp = top ;
-        if(temp == null)System.out.println("Empty stack");
-        while(temp != null) {
-            System.out.print(temp.data+" ");
-            temp=temp.next ;
-        }
+       void displayrec(node h){
+        if(h == null)return ;
+             displayrec(h.next);
+             System.out.print(h.data+" ");
        }
-
+       void display(){
+        if(top == null){
+            System.out.println("Empty Stack !");
+            return ;
+        }
+        displayrec(top);
+       }
        int pop(){
          if(top == null){
             System.out.print("Stack underflow !");
@@ -40,28 +43,28 @@ public class LLimplementation{
         st.push(7);
         st.push(8);
         st.push(9);
-        st.dispaly();
+       st.display();
         System.out.println();
         System.out.println(st.pop());
-        st.dispaly();
+        st.display();
         System.out.println();
          System.out.println(st.pop());
-        st.dispaly();
+        st.display();
         System.out.println();
          System.out.println(st.pop());
-        st.dispaly();
+        st.display();
         System.out.println();
          System.out.println(st.pop());
-        st.dispaly();
+        st.display();
         System.out.println();
          System.out.println(st.pop());
-        st.dispaly();
+        st.display();
         System.out.println();
          System.out.println(st.pop());
-        st.dispaly();
+        st.display();
         System.out.println();
          System.out.println(st.pop());
-        st.dispaly();
+        st.display();
         System.out.println(st.pop());
     }
 }
