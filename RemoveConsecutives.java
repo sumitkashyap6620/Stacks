@@ -1,5 +1,5 @@
 import java.util.* ;
-public class charStack{
+public class RemoveConsecutives{
     public static void main(String args[]){
         Stack<Integer> st =  new Stack<>(); 
         Scanner sc = new Scanner (System.in);
