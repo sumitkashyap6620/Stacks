@@ -7,7 +7,7 @@ public class largesthistogram{
         int[] pse = new int[a.length] ;
         Stack<Integer> st = new Stack<>();
         for(int i = 0 ; i < a.length ; i++){
-            while(st.size()!=0 && a[i] <a[st.peek()])st.pop();
+            while(st.size()!=0 && a[i] <= a[st.peek()])st.pop();
             if(st.size()==0){
                 st.push(i) ;
                 pse[i] = -1 ;
@@ -27,7 +27,7 @@ public class largesthistogram{
         //  st.push(a[a.length-1]);
         //  nse[a.length-1] = -1 ;
          for(int i = a.length-1 ; i >=0 ; i--){
-            while(st.size()!=0 && a[st.peek()] > a[i])
+            while(st.size()!=0 && a[st.peek()] >= a[i])
                 st.pop() ;
              if(st.size()==0){
                 nse[i] = a.length ;
