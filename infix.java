@@ -4,7 +4,9 @@ public class infix{
 
    public static void main(String args[]){
     System.out.println("Infix program :-");
-    String s = "9-5+3*4/6" ;
+    Scanner sc = new Scanner (System.in);
+    System.out.print("give string :- ");
+    String s = sc.next() ;
     Stack<Integer> val = new Stack<>();
     Stack<Character>  op = new Stack<>();
 
